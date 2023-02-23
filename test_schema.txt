@@ -1,0 +1,27 @@
+{
+  "type": "record",
+  "name": "Person",
+  "namespace": "com.ippontech.kafkatutorials",
+  "fields": [
+    {
+      "name": "firstName",
+      "type": "string"
+    },
+    {
+      "name": "lastName",
+      "type": "string"
+    },
+    {
+      "name": "birthDate",
+      "type": "long"
+    }
+  ]
+}
+
+curl -H "Content-Type: application/vnd.schemaregistry.v1+json" -X POST -d "{\"schema\":\"{\\\"type\\\":\\\"record\\\",\\\"name\\\":\\\"Person\\\",\\\"namespace\\\":\\\"com.ippontech.kafkatutorials\\\",\\\"fields\\\":[{\\\"name\\\":\\\"firstName\\\",\\\"type\\\":\\\"string\\\"},{\\\"name\\\":\\\"lastName\\\",\\\"type\\\":\\\"string\\\"},{\\\"name\\\":\\\"birthDate\\\",\\\"type\\\":\\\"long\\\"}]}\"}" http://localhost:8081/subjects/persons-avro-value/versions
+
+curl http://localhost:8081/subjects/persons-avro-value/versions/1
+
+curl -H "Content-Type: application/vnd.schemaregistry.v1+json" -X POST -d "{\"schema\":\"{\\\"type\\\":\\\"record\\\",\\\"name\\\":\\\"Person\\\",\\\"namespace\\\":\\\"com.ippontech.kafkatutorials\\\",\\\"fields\\\":[{\\\"name\\\":\\\"firstName\\\",\\\"type\\\":\\\"string\\\"},{\\\"name\\\":\\\"lastName\\\",\\\"type\\\":\\\"string\\\"},{\\\"name\\\":\\\"birthDate\\\",\\\"type\\\":\\\"long\\\"}]}\"}" http://localhost:8081/subjects/persons-avro-value/versions
+
+curl http://localhost:8081/subjects/persons-avro-value/versions/1
