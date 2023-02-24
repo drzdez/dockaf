@@ -3,6 +3,7 @@ Docker Kafka and Avro Schema server
 
 1. install docker desktop
 2. run from project dir
+
 docker-compose up -d
 
 reference:
